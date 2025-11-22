@@ -13,6 +13,7 @@ from src.exception import CustomException
 from src.logger import logging
 
 from src.utils import save_object
+import dill
 
 @dataclass
 class DataTransformatinConfig:
@@ -44,7 +45,7 @@ class DataTransformation:
                 steps=[
                     ("imputer",SimpleImputer(strategy="most_frequent")),
                     ("one_hot_encoder",OneHotEncoder()),
-                    ("scaler",StandardScaler())
+                    ("scaler",StandardScaler(with_mean=False))
 
 
                 ]
