@@ -7,7 +7,10 @@ import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OneHotEncoder , StandardScaler
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import OneHotEncoder
+OneHotEncoder(handle_unknown='ignore', sparse=False)
+
 
 from src.exception import CustomException
 from src.logger import logging
